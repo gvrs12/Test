@@ -1,7 +1,7 @@
 
 def workspace;
 node ('Node1') {
-    def build = BUILD_NUMBER
+    def build = BUILD_TIMESTAMP
     //buildTimeStamp = buildTimeStamp.split(" IST")
     stage ('Checkout')
     {
