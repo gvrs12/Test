@@ -34,7 +34,7 @@ node ('Node1') {
                     "pattern": "target/helloworld.war"
                 }
             ]
-        }"""
+        }""
         server.upload(uploadSpec)
 		server.upload spec: uploadSpec, buildInfo: buildInfo
 	}
@@ -55,6 +55,6 @@ node ('Node1') {
 	
 	stage ('Deploy')
 	{
-	    deploy adapters: [tomcat9(credentialsId: '83d19875-d5d4-4533-9f97-f31cc4039cb2', path: '', url: 'http://192.168.1.162:8082')], contextPath: null, onFailure: false, war: 'download/*.war'
+	    deploy adapters: [tomcat9(credentialsId: '83d19875-d5d4-4533-9f97-f31cc4039cb2', path: '', url: 'http://192.168.1.152:8082')], contextPath: null, onFailure: false, war: 'download/*.war'
 	}
 }
