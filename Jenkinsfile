@@ -34,7 +34,7 @@ node ('Node1') {
                     "pattern": "target/helloworld.war"
                 }
             ]
-        }""
+        }"""
         server.upload(uploadSpec)
 		server.upload spec: uploadSpec, buildInfo: buildInfo
 	}
