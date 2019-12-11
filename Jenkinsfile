@@ -1,5 +1,3 @@
-
-def workspace;
 node ('Node1') {
     def build = BUILD_TIMESTAMP
     //buildTimeStamp = buildTimeStamp.split(" IST")
@@ -30,7 +28,7 @@ node ('Node1') {
 		def uploadSpec = """{
             "files": [
                 {
-                    "target": "Test/helloworld_${build}.war",
+                    "target": "Test/helloworld_${env.BRANCH_NAME}_${build}.war",
                     "pattern": "target/helloworld.war"
                 }
             ]
