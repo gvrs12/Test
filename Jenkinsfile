@@ -1,5 +1,4 @@
-
-def workspace;
+ech0 "${env.BRANCH_NAME}"
 node ('Node1') {
     def build = BUILD_TIMESTAMP
     //buildTimeStamp = buildTimeStamp.split(" IST")
