@@ -2,7 +2,7 @@
 
 library 'SCDM-Lib'
 
-def String appname = 'Helloworld'
+def String appname = 'helloworld'
 def String buildtype = 'mvn'
 
 
