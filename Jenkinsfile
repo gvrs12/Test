@@ -10,5 +10,5 @@ node ('Node1') {
 	env.CODEREPO = 'git'
 	
 	//Call the ant groovy file
-	builder "${appname}", "${buildtype}"
+	Build "${appname}", "${buildtype}"
 }
