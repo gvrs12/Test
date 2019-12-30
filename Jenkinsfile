@@ -3,9 +3,19 @@ node ('Node1') {
     //buildTimeStamp = buildTimeStamp.split(" IST")
     stage ('Checkout')
     {
-        git credentialsId: '77f20f61-377f-4700-b712-6e5f0f5a0bff', url: 'git@github.com:gvrs12/Test.git' 
+        //git credentialsId: '77f20f61-377f-4700-b712-6e5f0f5a0bff', url: 'git@github.com:gvrs12/Test.git' 
         
-        echo "Checkout is scuccessful"
+        //echo "Checkout is scuccessful"
+	checkout scm
+	final scmVars = checkout(scm)
+	env.branchname = "${scmVars.GIT_BRANCH}"
+	echo "branchname is: ${scmVars.GIT_BRANCH}"
+
+	def String GIT_URL = "${scmVars.GIT_URL}"
+	def String[] URL_git = GIT_URL.split('//')
+	def String url_noHttps = URL_git[1]
+	env.GITURL_nohttps = "${url_noHttps}"
+	env.SCM_URL = "${GIT_URL}"
     }
 
     stage ('Build')
