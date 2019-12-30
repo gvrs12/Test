@@ -13,10 +13,10 @@ node ('Node1') {
 
 	def String GIT_URL = "${scmVars.GIT_URL}"
 	echo "GIT URL is: ${scmVars.GIT_URL}"
-	//def String[] URL_git = GIT_URL.split('//')
-	//echo "URL_git is: ${URL_git}"
-	//def String url_noHttps = URL_git[1]
-	//env.GITURL_nohttps = "${url_noHttps}"
+	def String[] URL_git = GIT_URL.split('//')
+	echo "URL_git is: ${URL_git}"
+	def String url_noHttps = URL_git[1]
+	env.GITURL_nohttps = "${url_noHttps}"
 	env.SCM_URL = "${GIT_URL}"
 	echo "SCM_URL is: ${GIT_URL}"
     }
