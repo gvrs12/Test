@@ -16,6 +16,7 @@ node ('Node1') {
 	def String url_noHttps = URL_git[1]
 	env.GITURL_nohttps = "${url_noHttps}"
 	env.SCM_URL = "${GIT_URL}"
+	echo "SCM_URL is: ${GIT_URL}"
     }
 
     stage ('Build')
