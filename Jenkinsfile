@@ -4,7 +4,7 @@ library 'SCDM-Lib'
 
 def String appname = 'helloworld'
 
-node ('Node1') {
+node {
 	env.CODEREPO = 'git'
 	
 	//Call the ant groovy file
