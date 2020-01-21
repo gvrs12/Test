@@ -7,6 +7,6 @@ def String appname = 'helloworld'
 node {
 	env.CODEREPO = 'git'
 	
-	//Call the ant groovy file
+	//Call the Build groovy file
 	Build "${appname}"
 }
