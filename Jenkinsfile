@@ -2,6 +2,8 @@
 
 import java.util.Date.*
 import java.util.Calender.*
+import groovy.time.TimeCategory.*
+import groovy.time.TimeDuriation.*
 
 library 'SCDM-Lib'
 
